@@ -34,6 +34,7 @@
     <div class="col-md-6" ng-controller="ToBuyController as tb">
      <h2>To Buy:</h2>
      <ul>
+       <!-- button to remove -->
        <li ng-repeat="item in tb.items">Buy {{item.quantity}} {{item.name}} <button class="btn btn-default" ng-click="tb.removeItem($index)"><span class="glyphicon glyphicon-ok"></span> Bought</button></li>
      </ul>
      <div class="emptyMessage" ng-if="tb.isEmpty()">Everything is bought!</div>

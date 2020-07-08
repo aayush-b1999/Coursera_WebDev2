@@ -8,4 +8,7 @@
             items: '<'
         }
     })
+    function CategoriesController() {
+        // console.log(this.items);
+    }
 })();

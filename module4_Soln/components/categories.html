@@ -1,0 +1,10 @@
+<table border="1">
+    <tr>
+        <td>Short Name</td>
+        <td>Name</td>
+    </tr>
+    <tr ng-repeat="item in $ctrl.items">
+        <td><a ui-sref="categitems({shortName : item.short_name})">{{item.short_name}}</a></td>
+        <td>{{item.name}}</td>
+    </tr>
+</table>

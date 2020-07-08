@@ -3,9 +3,12 @@
     angular.module('data')
     .component('categitems',{
         templateUrl: './components/categitems.html',
-        controller: CategoriesController,
+        controller: CategItemsController,
         bindings: {
-            ret: '<'
+            items: '<'
         }
     })
+    function CategItemsController() {
+        
+    }
 })();

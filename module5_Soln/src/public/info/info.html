@@ -1,0 +1,13 @@
+<div class="container">
+    <!-- {{info.nahi()}} -->
+    <div ng-hide="info.nahi()">
+        <div>First Name : {{info.first_name}}</div>
+        <div>Last Name : {{info.last_name}}</div>
+        <div>Email : {{info.email}}</div>
+        <div>Phone Number : {{info.phno}}</div>
+        <img ng-src="./images/menu/{{info.short_name}}/{{info.short_name}}.jpg">
+    </div>
+    <div ng-if="info.nahi()">
+        Not Signed Up Yet. <a ui-sref="public.form">Sign up Now!</a>
+    </div>
+</div>

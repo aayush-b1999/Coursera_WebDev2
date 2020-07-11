@@ -1,0 +1,26 @@
+<div class="container">
+    <form name="reg" novalidate>
+        <input type="text" name="firstName" placeholder="First Name" ng-model="form.first_name" required>
+        <span ng-if="(reg.firstName.$error.required) && reg.firstName.$touched">
+            Type first Name
+        </span><br>
+        <input type="text" name="lastName" placeholder="Last Name" ng-model="form.last_name" required>
+        <span ng-if="(reg.lastName.$error.required) && reg.lastName.$touched">
+            Type last Name
+        </span>
+        <br>
+        <input type="text" name="shortname" placeholder="Short Name of favourite dish type" ng-model="form.short_name" required>
+        <span ng-if="(((reg.shortname.$error.required)|| form.check()) && reg.shortname.$touched )">
+            No such menu number exists
+        </span>
+        <!-- {{form.check()}} -->
+        <br>
+        <input type="email" name="email" placeholder="Email" ng-model="form.email" required>
+        <span ng-if="(((reg.email.$error.required)|| reg.email.$invalid) && reg.email.$touched)">Write correct email address</span><br>
+        <input type="text" name="phno" placeholder="Phone ###-###-####" ng-model="form.phno" pattern="(\d{3})-(\d{3})-(\d{4})" required>
+        <span ng-if="(((reg.phno.$error.required)|| reg.phno.$invalid) && reg.phno.$touched)"> Phone number must be of form ###-###-####</span><br>
+        <button ng-disabled="reg.$invalid" ng-click="form.click()">Submit</button>
+    </form>
+    <!-- {{form.allcat}} -->
+    <div ng-if="form.done">Your information has been saved</div>
+</div>
